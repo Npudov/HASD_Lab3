@@ -8,7 +8,7 @@ import static org.example.database.methods.DbManupulate.*;
 public class SimpleSQLiteDatabase {
 
     private static Connection connection = null;
-    private static String url = "jdbc:sqlite:D:/SQLiteProjects/SimpleDB/simple_database.db";
+    private static String pathDb = "jdbc:sqlite:D:/SQLiteProjects/SimpleDB/simple_database.db";
 
     public static void main(String[] args) throws Exception {
 
@@ -22,7 +22,7 @@ public class SimpleSQLiteDatabase {
     private static Connection getConn() throws Exception {
         if (connection == null) {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection(url);
+            connection = DriverManager.getConnection(pathDb);
         }
         return connection;
     }
