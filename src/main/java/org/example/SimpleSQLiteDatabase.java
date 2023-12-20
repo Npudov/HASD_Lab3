@@ -14,8 +14,10 @@ public class SimpleSQLiteDatabase {
 
         connection = getConn();
 
-        createTable(connection, "Students");
-        insertStudent(connection, "Ivanov Ivan Ivanich", 25);
+        createTableGroups(connection);
+        createTableStudents(connection);
+        insertGroup(connection, 345);
+        insertStudent(connection, 1,"Ivanov Ivan Ivanich", 25);
         connection.close();
     }
 
